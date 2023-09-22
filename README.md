@@ -90,6 +90,7 @@ Protokol SMTP by default menggunakan port **25**, sebagai bukti contoh 1 paket t
 ### c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 Ciri dari IP private adalah dengan awalan "10.", oleh karena itu jika kita ingin mendapat IP public maka kita ambil contoh dengan filter IP dst dengan `!(ip.dst_host == "10.")`.
+
 ![image](https://github.com/Mengz04/Jarkom-Modul-1-D10-2023/assets/78022264/2d8485c5-bb34-47e9-a1c3-d5317715c2f0)
 
 Hasil menunjukkan 1 jenis IP dest yaitu **74.53.140.153**

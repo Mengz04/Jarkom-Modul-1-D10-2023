@@ -97,3 +97,51 @@ Hasil menunjukkan 1 jenis IP dest yaitu **74.53.140.153**
 
 ### Dokumentasi terminal
 ![image](https://github.com/Mengz04/Jarkom-Modul-1-D10-2023/assets/78022264/fb9ff7f0-16c5-4c67-b3d8-51540c59c4ba)
+
+## 6. Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+
+Terdapat kode "server SOURCE ADDRESS 7812 is invalid", maka hal pertama yang saya cari adalah mencari nomor ke 7812 dengan filter frame.number==7812
+
+![Screenshot 2023-09-18 192713](https://github.com/Mengz04/Jarkom-Modul-1-D10-2023/assets/92387421/b61e47d1-6443-4581-acb4-8ca281a83529)
+
+kemudian didapat ip source **104.18.14.101** dan diubah sesuai cipher yang digunakan yaitu a1z26 kemudian **104.18.14.101** diubah ke abjad menjadi 10 4 = JD, 18 = R, 14 = N, 10 1 = JA
+
+## 7. Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+untuk mendapatkan jumlah packet yang menuju 184.87.193.88 digunakan filter **ip.dst == 184.87.193.88**
+
+![Screenshot 2023-09-18 192713](https://github.com/dagdo03/Word_Ladder/assets/92387421/66a2d3d0-6e4a-446c-a5b9-7d7cf19493a3)
+
+### Dokumentasi terminal
+![Screenshot 2023-09-18 192443](https://github.com/dagdo03/Word_Ladder/assets/92387421/4618fc6d-1e0d-4fff-9b6e-c0cf2e23d16d)
+
+## 8. Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+untuk mengambil semua protokol paket yang menuju port 80 digunakan kueri filter **tcp.dstport == 80 || udp.dstport == 80**
+
+![Screenshot 2023-09-18 202549](https://github.com/dagdo03/Word_Ladder/assets/92387421/b5593ed6-c2cd-4109-8b37-f3efe0ff30e6)
+
+Kegunaan filter ini untuk menampilkan semua paket yang memiliki port tujuan (destination port) 80 pada protokol TCP atau UDP
+
+### Dokumentasi terminal
+![Screenshot 2023-09-18 202357](https://github.com/dagdo03/Word_Ladder/assets/92387421/267bb40c-d149-4a1d-979b-d31cac720bee)
+
+## 9. Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+
+untuk mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34 digunakan filter **ip.src == 10.51.40.1 && ip.dst != 10.39.55.34
+
+![Screenshot 2023-09-18 201840](https://github.com/dagdo03/Word_Ladder/assets/92387421/fb103ecc-0184-4c8a-ae2b-4be7b46d183a)
+
+Filter ini akan menampilkan semua paket yang memiliki alamat sumber (source address) 10.51.40.1 dan alamat tujuan (destination address) bukan 10.39.55.34
+
+### Dokumentasi terminal
+![Screenshot 2023-09-18 201613](https://github.com/dagdo03/Word_Ladder/assets/92387421/34241e67-701f-4b1c-acfd-4e6d93c2b678)
+
+## 10. Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+cara yang saya lakukan adalah menggunakan filter **telnet** agar protocol yang ditampilkan hanyalah telnet kemudian klik kanan pada salah satu frame dan klik follow -> TCP Stream kemudian temukan kredensial yang tepat.
+
+![Screenshot 2023-09-18 203902](https://github.com/dagdo03/Word_Ladder/assets/92387421/fd1f50b8-f62b-42d8-b852-952e9c93946b)
+
+### Dokumentasi terminal
+![Screenshot 2023-09-18 203819](https://github.com/dagdo03/Word_Ladder/assets/92387421/92974b75-7a02-425e-a095-53b89376f655)
+
